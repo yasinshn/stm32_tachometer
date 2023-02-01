@@ -1,0 +1,204 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.37.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: yasin þahin, Selcuk University, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.37.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.18
+Assembler:       Armasm.exe V6.18
+Linker/Locator:  ArmLink.exe V6.18
+Library Manager: ArmAr.exe V6.18
+Hex Converter:   FromElf.exe V6.18
+CPU DLL:         SARMCM3.DLL V5.37.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      UL2CM3.DLL V1.164.7.0
+Dialog DLL:      TCM.DLL V1.56.1.0
+ 
+<h2>Project:</h2>
+C:\Users\yasin\OneDrive\Belgeler\hyperloop\keil\navigasyon\navigasyon.uvprojx
+Project File Date:  11/22/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.18', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+main.c(19): warning: no previous extern declaration for non-static variable 'maxSpeed' [-Wmissing-variable-declarations]
+float maxSpeed = 0, maxSpeedKm = 0;
+      ^
+main.c(19): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+float maxSpeed = 0, maxSpeedKm = 0;
+^
+main.c(19): warning: no previous extern declaration for non-static variable 'maxSpeedKm' [-Wmissing-variable-declarations]
+float maxSpeed = 0, maxSpeedKm = 0;
+                    ^
+main.c(19): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+float maxSpeed = 0, maxSpeedKm = 0;
+^
+main.c(41): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+void SysTick_Handler(){
+     ^
+main.c(41): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SysTick_Handler(){
+^
+static 
+main.c(41): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void SysTick_Handler(){
+                    ^
+main.c(49): warning: // comments are not allowed in this language [-Wcomment]
+// Not Used For Now -- Delay Function
+^
+main.c(61): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+        State=(State<<1) | !pin_state | 0xe000; // pin_state may change !!!!
+             ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+main.c(66): warning: no previous prototype for function 'EXTI0_IRQHandler' [-Wmissing-prototypes]
+void EXTI0_IRQHandler(){
+     ^
+main.c(66): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void EXTI0_IRQHandler(){
+^
+static 
+main.c(66): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void EXTI0_IRQHandler(){
+                     ^
+main.c(7): warning: In file included from...
+C:/Users/yasin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(8347): warning: In file included from...
+./RTE/Device/STM32F103C8\stm32f10x_conf.h(54): warning: In file included from...
+C:/Users/yasin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc\stm32f10x_exti.h(75): warning: padding size of 'EXTI_InitTypeDef' with 1 byte to alignment boundary [-Wpadded]
+typedef struct
+        ^
+main.c(7): warning: In file included from...
+C:/Users/yasin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(8347): warning: In file included from...
+./RTE/Device/STM32F103C8\stm32f10x_conf.h(87): warning: In file included from...
+C:/Users/yasin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc\stm32f10x_tim.h(50): warning: padding size of 'TIM_TimeBaseInitTypeDef' with 1 byte to alignment boundary [-Wpadded]
+typedef struct
+        ^
+main.c(7): warning: In file included from...
+C:/Users/yasin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(8347): warning: In file included from...
+./RTE/Device/STM32F103C8\stm32f10x_conf.h(90): warning: In file included from...
+C:/Users/yasin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc\stm32f10x_usart.h(49): warning: padding size of 'USART_InitTypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+main.c(180): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+                                speed = 4000.0 / timerThreshold;
+                                      ~ ~~~~~~~^~~~~~~~~~~~~~~~
+main.c(182): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+                        speedKm = speed * 3.6;
+                                ~ ~~~~~~^~~~~
+main.c(182): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        speedKm = speed * 3.6;
+                                  ^~~~~ ~
+main.c(185): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        speed, bantCounter, speedKm, maxSpeedKm);
+                                                     ^~~~~~~~~~
+main.c(185): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        speed, bantCounter, speedKm, maxSpeedKm);
+                                            ^~~~~~~
+main.c(185): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        speed, bantCounter, speedKm, maxSpeedKm);
+                        ^~~~~
+main.c(186): warning: passing 'char[80]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+                        print(navBuffer);
+                              ^~~~~~~~~
+main.c(28): note: passing argument to parameter 'c' here
+static void print(uint8_t *c){
+                           ^
+main.c(195): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+main.c(169): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        uint32_t millisPrev = 0;
+                 ^
+main.c(20): warning: no previous extern declaration for non-static variable 'navBuffer' [-Wmissing-variable-declarations]
+char navBuffer[80];
+     ^
+main.c(20): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char navBuffer[80];
+^
+main.c(35): warning: unused function 'scan' [-Wunused-function]
+static uint16_t scan(){
+                ^
+22 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=13284 RO-data=920 RW-data=4 ZI-data=1752  
+FromELF: creating hex file...
+".\Objects\navigasyon.axf" - 0 Error(s), 22 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.0.pack
+                Keil.STM32F1xx_DFP.2.4.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: GPIO Version: 1.3
+   * Component: Startup Version: 1.0.0
+   * Component: EXTI Version: 3.6.0
+   * Component: Framework Version: 3.6.0
+   * Component: GPIO Version: 3.6.0
+   * Component: RCC Version: 3.6.0
+   * Component: TIM Version: 3.6.0
+   * Component: USART Version: 3.6.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103C8
+  ./RTE/_Target_1
+  C:/Users/yasin/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/yasin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include
+  C:/Users/yasin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc
+  C:/Users/yasin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/RTE_Driver
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:GPIO:1.3
+      Include file:  RTE_Driver/GPIO_STM32F10x.h
+      Source file:   RTE_Driver/GPIO_STM32F10x.c
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
+      Include file:  RTE_Driver/Config/RTE_Device.h
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+      Source file:   Device/Source/system_stm32f10x.c
+
+   * Component: Keil::Device:StdPeriph Drivers:EXTI:3.6.0
+      Source file:   Device/StdPeriph_Driver/src/stm32f10x_exti.c
+      Include file:  Device/StdPeriph_Driver/inc/stm32f10x_exti.h
+
+   * Component: Keil::Device:StdPeriph Drivers:Framework:3.6.0
+      Source file:   Device/StdPeriph_Driver/src/misc.c
+      Source file:   Device/StdPeriph_Driver/templates/stm32f10x_it.c
+      Include file:  Device/StdPeriph_Driver/inc/misc.h
+      Source file:   Device/StdPeriph_Driver/templates/stm32f10x_conf.h
+      Include file:  Device/StdPeriph_Driver/templates/stm32f10x_it.h
+
+   * Component: Keil::Device:StdPeriph Drivers:GPIO:3.6.0
+      Source file:   Device/StdPeriph_Driver/src/stm32f10x_gpio.c
+      Include file:  Device/StdPeriph_Driver/inc/stm32f10x_gpio.h
+
+   * Component: Keil::Device:StdPeriph Drivers:RCC:3.6.0
+      Include file:  Device/StdPeriph_Driver/inc/stm32f10x_rcc.h
+      Source file:   Device/StdPeriph_Driver/src/stm32f10x_rcc.c
+
+   * Component: Keil::Device:StdPeriph Drivers:TIM:3.6.0
+      Include file:  Device/StdPeriph_Driver/inc/stm32f10x_tim.h
+      Source file:   Device/StdPeriph_Driver/src/stm32f10x_tim.c
+
+   * Component: Keil::Device:StdPeriph Drivers:USART:3.6.0
+      Include file:  Device/StdPeriph_Driver/inc/stm32f10x_usart.h
+      Source file:   Device/StdPeriph_Driver/src/stm32f10x_usart.c
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
