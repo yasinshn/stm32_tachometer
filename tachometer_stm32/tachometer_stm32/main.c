@@ -12,10 +12,10 @@ BaudRate: 115200    EXTI_Pin: PB0     USART2_Pin: PA2=TX  PA3=RX
 
 static __IO uint32_t millisCounter = 0;
 static uint32_t timerValue = 0, timerThreshold, oldTime = 0;
-static float speed, speedKm;
+static float speed;
 static uint8_t IT_FLAG = 0;
 static uint16_t bantCounter = 0;
-float maxSpeed = 0, maxSpeedKm = 0;
+float maxSpeed = 0;
 char navBuffer[80];
 
 
@@ -174,14 +174,12 @@ int main(){
 		}
 		if(IT_FLAG){
 			bantCounter++;
-			timerThreshold = timerValue - oldTime + 50;
+			timerThreshold = timerValue - oldTime;
 			if(timerThreshold > 0)
-				speed = 4000.0 / timerThreshold;
+				speed = 60 * 1000.0 / timerThreshold;
 			maxSpeed = max(maxSpeed, speed);
-			speedKm = speed * 3.6;
-			maxSpeedKm = max(maxSpeedKm, speedKm);
-			sprintf(navBuffer,"Hiz: %.2f -- Bant No: %d -- Hiz(Km): %.2f -- Max Hiz: %.2f km\n",
-			speed, bantCounter, speedKm, maxSpeedKm);
+			sprintf(navBuffer,"Hiz: %.2f rpm -- Max Hiz: %.2f m\n",
+			speed, maxSpeed);
 			print(navBuffer);
 			IT_FLAG--;
 		}
